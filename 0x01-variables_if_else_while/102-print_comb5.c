@@ -16,9 +16,9 @@ int main(void)
 	{
 		for (B = '0'; B <= '9'; B++)
 		{
-			for (a = A; a <= '9'; a++)
+			for (a = '0'; a <= '9'; a++)
 			{
-				for (b = B + 1; b <= '9'; b++)
+				for (b = '0'; b <= '9'; b++)
 				{
 					putchar(A);
 					putchar(B);
