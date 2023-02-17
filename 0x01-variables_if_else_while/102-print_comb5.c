@@ -16,7 +16,7 @@ int main(void)
 	{
 		for (B = '0'; B <= '9'; B++)
 		{
-			for (a = A; a <= '9'; a++)
+			for (a = A + 1; a <= '9'; a++)
 			{
 				for (b = B + 1; b <= '9'; b++)
 				{
