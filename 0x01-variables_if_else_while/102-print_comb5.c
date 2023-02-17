@@ -25,9 +25,16 @@ int main(void)
 					putchar(' ');
 					putchar(a);
 					putchar(b);
-					putchar(',');
-					putchar(' ');
+					
+					if (!((A == '9' && B == '8') &&
+					      (B == '9' && b == '9')))
+					{
+
+						putchar(',');
+						putchar(' ');
+					}
 				}
+
 				b = '0';
 			}
 		}
