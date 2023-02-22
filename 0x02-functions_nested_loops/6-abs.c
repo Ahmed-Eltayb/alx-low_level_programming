@@ -2,23 +2,20 @@
 /**
  * _abs - computes the absolute value of an integer
  *
- * @number: number input
+ * @n: number input
  *
  * Return: Returns 0
  */
-int _abs(int number)
+int _abs(int n)
 {
-	int n;
-
 	if (n >= 0)
 	{
-		n = n;
-		_putchar('n');
+		_putchar(n);
 	}
 	else
 	{
 		n = n * -1;
-		_putchar('n');
+		_putchar(n);
 	}
 	return (0);
 }
