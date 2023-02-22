@@ -2,11 +2,11 @@
 /**
  * _abs - computes the absolute value of an integer
  *
- * @n: number input
+ * @number: number input
  *
  * Return: Returns 0
  */
-int _abs(int n)
+int _abs(int number)
 {
 	int n;
 
