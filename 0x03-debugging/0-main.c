@@ -3,8 +3,6 @@
 /**
  * main - debugging positive or negative function
  *
- * @n: input number
- *
  * Return: 0
  */
 int main(void)
