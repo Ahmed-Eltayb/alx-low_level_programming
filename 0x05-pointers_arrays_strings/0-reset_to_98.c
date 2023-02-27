@@ -3,13 +3,9 @@
  * reset_to_98 - function that takes a pointer
  * and updates the value it points to to 98.
  *
- * @n: input number
- * @*p: pointer that have the address of n
+ * @n: pointer to the value of an int
  */
 void reset_to_98(int *n)
 {
-	int *p = &n;
-
-	*p = 98;
-	return (0);
+	*n = 98;
 }
