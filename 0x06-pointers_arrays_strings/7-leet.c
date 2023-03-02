@@ -6,24 +6,24 @@
  * @n: input string
  * Return: n the encoded string
  */
-char *leet(char *n)
+char *leet(char *s)
 {
-	int a;
-	int x;
-	int find[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int replace[] = {'4', '3', '0', '7', '1'};
 
-	for (a = 0; n[a] != '\0'; a++)
+	int a[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	int b[11] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+
+	int i, j;
+
+	for (j = 0; s[j] != '\0'; j++)
 	{
-		for (b = 0; b <= 9; b++)
+		for (i = 0; a[i] != '\0'; i++)
 		{
-			if (n[a] == find[b])
+			if (s[j] == a[i])
 			{
-				n[a] = replace[b / 2];
-				b = 9;
+				s[j] = b[i];
 			}
 		}
 	}
 
-	return (n);
+	return (s);
 }
