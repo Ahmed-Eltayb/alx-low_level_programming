@@ -16,7 +16,7 @@ int check_prime(int n, int divisor)
 	{
 		return (0);
 	}
-	return (is_prime(n, divisor + 1));
+	return (check_prime(n, divisor + 1));
 
 }
 
@@ -40,5 +40,5 @@ int is_prime_number(int n)
 		return (1);
 	}
 
-	return (is_prime(n, divisor));
+	return (check_prime(n, divisor));
 }
