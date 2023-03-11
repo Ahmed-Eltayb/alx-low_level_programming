@@ -4,7 +4,7 @@
 /**
  * main - prints the minimum number of coins for an amount of money
  * @argc: n arguments
- * @argv: arguments 
+ * @argv: arguments
  * Return: 0
  */
 
@@ -24,10 +24,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-
-	
 	n = atoi(argv[1]);
-
 	coins += n / 25;
 	n = n % 25;
 	coins += n / 10;
