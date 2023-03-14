@@ -34,14 +34,11 @@ char *str_concat(char *s1, char *s2)
 		len2++, j++;
 	}
 	len2++;
-
 	concat = malloc(sizeof(char) * (len1 + len2));
-
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
-
 	i = 0, j = 0;
 	while (i < len1)
 	{
@@ -53,6 +50,5 @@ char *str_concat(char *s1, char *s2)
 		*(concat + i) = *(s2 + j);
 		i++, j++;
 	}
-
 	return (concat);
 }
