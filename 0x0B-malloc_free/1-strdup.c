@@ -9,32 +9,37 @@
  * @str: input char
  * Return: pointer
  */
+
 char *_strdup(char *str)
 {
-	int i;
-	int end;
 	char *array;
+	int i = 0;
+	int len = 0;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	for (end = 0; end <= *str; end++)
+	while (*(str + i))
 	{
+		len++, i++;
 	}
-
-	end += 1;
-	array = malloc(sizeof(char) * end);
-
-	for (i = 0; i < end; i++)
-	{
-		array[i] = str[i];
-	}
+	len++;
+	
+	array = malloc(sizeof(char) * len);
 
 	if (array == NULL)
 	{
 		return (NULL);
 	}
+
+	i = 0;
+	while (i < len)
+	{
+		*(array + i) = *(str + i);
+		i++;
+	}
+
 	return (array);
 }
