@@ -1,48 +1,58 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include"main.h"
+
+/**
+ * _strlen - calculate and return string length
+ * @string: string
+ * Return: string length
+ */
+
+int _strlen(char *string)
+{
+	int i;
+
+	for (i = 0; string[i] != '\0'; i++)
+	{
+		;
+	}
+	return (i);
+}
+
 /**
  * string_nconcat - function that concatenates two strings.
- * @s1: input
- * @s2: input
+ * @s1: input string
+ * @s2: input string
  * @n: s2's number of bytes
  * Return: concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *co_s;
-	unsigned int i, j, co, co_2;
+	char *ptr;
+	int num, len, i, j;
 
-	if (s1 == NULL)
+	num = n;
+
+	if (s1 == NULL) /* account for NULL strings */
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	if (num < 0) /* account for negative n bytes */
+		return (NULL);
+	if (num >= _strlen(s2)) /* account for n too big */
+		num = _strlen(s2);
 
-	for (i = 0; s1[i] != '\0'; i++)
-	{
-	}
+	len = _strlen(s1) + num + 1; /* +1 to account for null pointer */
 
-	for (j = 0; s2[j] != '\0'; j++)
-	{
-	}
-
-	if (n < j)
-		j = n;
-
-	j += i;
-	co_s = malloc(sizeof(char *) * (j + 1));
-
-	if (co_s == NULL)
+	ptr = malloc(sizeof(*ptr) * len); /* malloc and check for error */
+	if (ptr == NULL)
 		return (NULL);
 
-	for (co = 0; co < i; co++)
-		co_s[co] = s1[co];
-	for (co_2 = 0; co < j; co_2++)
-	{
-		co_s[co] = s2[co_2];
-		co++;
-	}
-	co++;
-	co_s[co] = '\0';
-	return (co_s);
+	for (i = 0; s1[i] != '\0'; i++) /* concat */
+		ptr[i] = s1[i];
+	for (j = 0; j < num; j++)
+		ptr[i + j] = s2[j];
+	ptr[i + j] = '\0';
+
+	return (ptr);
 }
