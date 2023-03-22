@@ -4,7 +4,7 @@
 /**
  * int_index - function that searches for an integer
  * @array: input array
- * @sise: input int
+ * @size: input int
  * @cmp: pointer
  * Return: -1
  */
