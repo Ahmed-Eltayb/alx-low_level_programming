@@ -4,7 +4,8 @@
 #include "lists.h"
 
 /**
- * add_nodeint - function that adds a new node at the beginning of a listint_t list
+ * add_nodeint - function that adds a new node at
+ * the beginning of a listint_t list
  * @head: pointer
  * @n: n to be added
  * Return: newNode
