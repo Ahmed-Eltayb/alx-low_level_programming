@@ -1,6 +1,15 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int _strlen(char *str)
+{
+	int len;
+
+	for (len = 0; str[len] != '\0'; len++)
+		;
+
+	return (len);
+}
 
 #include <sys/types.h>
 
